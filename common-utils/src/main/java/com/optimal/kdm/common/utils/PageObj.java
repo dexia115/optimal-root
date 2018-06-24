@@ -1,7 +1,9 @@
 package com.optimal.kdm.common.utils;
 
 import java.util.List;
+import lombok.Data;
 
+@Data
 @SuppressWarnings("rawtypes")
 public class PageObj<T> {
 
@@ -29,54 +31,5 @@ public class PageObj<T> {
 
 	//查询索引位置
 	private int fromIndex = -1;
-
-	public List getItems() {
-		return items;
-	}
-	
-	public void setItems(List items) {
-		this.items = items;
-	}
-
-	public long getTotalCount() {
-		return totalCount;
-	}
-
-	public void setTotalCount(long totalCount) {
-		this.totalCount = totalCount;
-	}
-
-	public int getTotalPageCount() {
-//		totalPageCount = totalCount % pageSize == 0 ? totalCount / pageSize : totalCount / pageSize + 1;
-		return totalPageCount;
-	}
-
-	public void setTotalPageCount(int totalPageCount) {
-		this.totalPageCount = totalPageCount;
-	}
-
-	public int getPageSize() {
-		return pageSize;
-	}
-
-	public void setPageSize(int pageSize) {
-		this.pageSize = pageSize;
-	}
-
-	public int getCurrentPage() {
-		return currentPage;
-	}
-
-	public void setCurrentPage(int currentPage) {
-		this.currentPage = currentPage;
-	}
-
-	public int getFromIndex() {
-		return fromIndex;
-	}
-
-	public void setFromIndex(int fromIndex) {
-		this.fromIndex = fromIndex;
-	}
 
 }
